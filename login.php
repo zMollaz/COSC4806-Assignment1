@@ -6,7 +6,7 @@
 
   <body>
     <h1>Login</h1>
-    <form action="/login.php" method="post">
+    <form action="validate.php" method="POST">
       <label for="username">Username:</label>
       <br>
       <input type="text" id="username" name="username"                           placeholder="Enter your username">
