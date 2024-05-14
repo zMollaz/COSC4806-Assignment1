@@ -10,6 +10,7 @@
   if ($username == $valid_username && $password == $valid_password) {
     $_SESSION["username"] = $username;
     $_SESSION["authenticated"] = true;
+    $_SESSION["login_attempts"] = 1;
     header("location: /index.php");
     
   } else {
@@ -18,6 +19,7 @@
     } else {
         $_SESSION["login_attempts"]++;
     }
-    echo $_SESSION["login_attempts"];
+    echo "Number of unsuccessful login attempts: " . $_SESSION["login_attempts"];
+    echo '<p><a href="/login.php">Back to login</a></p>';
   }
 ?>
