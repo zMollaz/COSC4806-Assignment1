@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION["authenticated"])) {
+  header("location: /");
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
