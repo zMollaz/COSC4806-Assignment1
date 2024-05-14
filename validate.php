@@ -9,7 +9,9 @@
 
   if ($username == $valid_username && $password == $valid_password) {
     $_SESSION["username"] = $username;
+    $_SESSION["authenticated"] = true;
     header("location: /index.php");
+    
   } else {
     if (!isset($_SESSION["login_attempts"])) {
         $_SESSION["login_attempts"] = 1;
